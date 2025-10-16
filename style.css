@@ -1,0 +1,51 @@
+/* assets/css/style.css */
+:root{
+  --bg:#f8f7ff;
+  --card:#ffffff;
+  --accent:#7c3aed; /* ungu */
+  --accent-2:#fb7185; /* merah muda */
+  --muted:#6b7280;
+  --radius:12px;
+  --glass: rgba(255,255,255,0.6);
+}
+
+*{box-sizing:border-box;font-family:Inter, Arial, sans-serif}
+body{
+  margin:0;
+  background: linear-gradient(180deg,#eef2ff 0%,#fff5f7 100%);
+  color:#0f172a;
+  padding:20px;
+}
+
+.container{max-width:980px;margin:0 auto;}
+.header{display:flex;align-items:center;justify-content:space-between;padding:12px 0;}
+.card{background:var(--card);border-radius:var(--radius);padding:18px;box-shadow:0 8px 24px rgba(124,58,237,0.06);margin-bottom:18px}
+.btn{display:inline-block;padding:10px 14px;border-radius:10px;text-decoration:none;color:#fff;background:var(--accent);border:none;cursor:pointer}
+.btn-alt{background:var(--accent-2)}
+.form-group{margin-bottom:12px}
+.form-control{width:100%;padding:10px;border-radius:8px;border:1px solid #e6e7f2}
+.nav{display:flex;gap:12px;align-items:center}
+.footer{padding:20px;text-align:center;color:var(--muted);font-size:14px;margin-top:30px}
+
+/* Ticket list */
+.tickets{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
+.ticket{padding:14px;border-radius:12px;background:linear-gradient(180deg,#ffffff,#fbfbff);border:1px solid #f1eefb}
+.ticket h4{margin:0 0 8px 0}
+.small{font-size:13px;color:var(--muted)}
+
+/* background hero */
+.hero{
+  background-image: url('../assets/img/rinjani-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  border-radius:12px;
+  padding:26px;
+  color:#fff;
+  margin-bottom:18px;
+  position:relative;
+  overflow:hidden;
+}
+.hero::after{content:"";position:absolute;left:0;top:0;right:0;bottom:0;background:linear-gradient(180deg, rgba(15,23,42,0.2), rgba(15,23,42,0.35));border-radius:12px}
+.hero > *{position:relative;z-index:2}
+.logo{display:flex;gap:10px;align-items:center}
+.logo img{height:44px}
